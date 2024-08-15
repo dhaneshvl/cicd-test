@@ -17,7 +17,7 @@ class TurfTrackerApplicationTest {
     @Test
     public void testWelcomeEndpoint() throws Exception {
 
-        String name = "Dhanesh Waran VL";
+        String name = "Dhanesh Waran V";
 
         mockMvc.perform(MockMvcRequestBuilders.get("/welcome/{name}", name))
                 .andExpect(MockMvcResultMatchers.status().isOk())
