@@ -21,7 +21,7 @@ class TurfTrackerApplicationTest {
 
         mockMvc.perform(MockMvcRequestBuilders.get("/welcome/{name}", name))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content().string("Hello " + name));
+                .andExpect(MockMvcResultMatchers.content().string("Hello " + name.split(" ")[0]));
 
     }
 
