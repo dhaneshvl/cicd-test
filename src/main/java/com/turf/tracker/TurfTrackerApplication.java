@@ -12,11 +12,12 @@ public class TurfTrackerApplication {
 
     @GetMapping("/welcome/{name}")
     public String welcome(@PathVariable String name) {
+        name = name.split(" ")[0];
         return "Hello " + name;
     }
 
     public static void main(String[] args) {
-		SpringApplication.run(TurfTrackerApplication.class, args);
+        SpringApplication.run(TurfTrackerApplication.class, args);
     }
 
 }
